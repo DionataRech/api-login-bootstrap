@@ -27,7 +27,6 @@ app.post("/usuarios", verificacaoCriarContas, async (req, res) => {
   const hashSenha = await bcrypt.hash(data.senha, 10);
   registroUsuarios.push({
     id: contadorId,
-    nome: data.nome,
     email: data.email,
     senha: hashSenha,
   });
